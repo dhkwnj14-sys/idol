@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="2026년 7월 5일 기준 K-POP 신규 여자 아이돌 그룹 정보 — 데뷔 그룹, 데뷔 예정 그룹, 타임라인">
+  <title>NEW GIRLS — K-POP 신규 여자 아이돌 가이드</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="logo">
+        <span class="logo-icon">✦</span>
+        NEW<span class="logo-accent">GIRLS</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">홈</a></li>
+        <li><a href="#groups">그룹</a></li>
+        <li><a href="#timeline">타임라인</a></li>
+        <li><a href="#upcoming">데뷔 예정</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="hero-orb hero-orb--1"></div>
+        <div class="hero-orb hero-orb--2"></div>
+        <div class="hero-orb hero-orb--3"></div>
+      </div>
+      <div class="container hero-content">
+        <p class="hero-badge">2026. 07. 05 기준 업데이트</p>
+        <h1 class="hero-title">
+          <span class="hero-title-line">K-POP</span>
+          <span class="hero-title-line hero-title-line--accent">신규 여자 아이돌</span>
+          <span class="hero-title-line">완벽 가이드</span>
+        </h1>
+        <p class="hero-desc">
+          5세대 걸그룹의 새로운 물결 — 2025~2026년 데뷔 그룹부터
+          곧 등장할 차세대 아이돌까지, 한눈에 확인하세요.
+        </p>
+        <div class="hero-actions">
+          <a href="#groups" class="btn btn--primary">그룹 둘러보기</a>
+          <a href="#timeline" class="btn btn--ghost">타임라인 보기</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-count="7">0</span>
+            <span class="stat-label">데뷔 그룹</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="3">0</span>
+            <span class="stat-label">데뷔 예정</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="46">0</span>
+            <span class="stat-label">총 멤버</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section class="featured" id="featured">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">HOT ROOKIE</span>
+          <h2 class="section-title">지금 주목할 그룹</h2>
+        </div>
+        <div class="featured-grid" id="featuredGrid"></div>
+      </div>
+    </section>
+
+    <section class="groups" id="groups">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ALL GROUPS</span>
+          <h2 class="section-title">신규 걸그룹 전체</h2>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-tabs" role="tablist">
+            <button class="filter-tab active" data-filter="all" role="tab">전체</button>
+            <button class="filter-tab" data-filter="debuted" role="tab">데뷔 완료</button>
+            <button class="filter-tab" data-filter="upcoming" role="tab">데뷔 예정</button>
+          </div>
+          <div class="search-box">
+            <input type="search" id="searchInput" placeholder="그룹명, 소속사 검색..." aria-label="그룹 검색">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="groups-grid" id="groupsGrid"></div>
+        <p class="no-results hidden" id="noResults">검색 결과가 없습니다.</p>
+      </div>
+    </section>
+
+    <section class="timeline-section" id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">TIMELINE</span>
+          <h2 class="section-title">데뷔 타임라인</h2>
+          <p class="section-sub">2025년 2월부터 2026년 7월까지의 주요 걸그룹 데뷔 일정</p>
+        </div>
+        <div class="timeline" id="timelineList"></div>
+      </div>
+    </section>
+
+    <section class="upcoming" id="upcoming">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">COMING SOON</span>
+          <h2 class="section-title">데뷔 예정 &amp; 주요 일정</h2>
+        </div>
+        <div class="upcoming-grid" id="upcomingGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">✦</span> NEWGIRLS
+      </div>
+      <p class="footer-note">
+        본 페이지는 2026년 7월 5일 기준 공개된 정보를 바탕으로 제작되었습니다.<br>
+        K-POP 신규 여자 아이돌 정보를 한곳에서 확인하세요.
+      </p>
+      <p class="footer-copy">&copy; 2026 NEW GIRLS Guide. For educational purposes.</p>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="닫기">&times;</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="members.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
