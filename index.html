@@ -154,7 +154,90 @@
     </div>
   </div>
 
+  <!-- ===== GPT 챗봇 ===== -->
+  <div class="chatbot" id="chatbot">
+    <div class="chatbot-panel" id="chatbotPanel" aria-hidden="true">
+      <header class="chatbot-header">
+        <div class="chatbot-header-info">
+          <span class="chatbot-avatar">✦</span>
+          <div>
+            <h3 class="chatbot-title">NEWGIRLS AI</h3>
+            <p class="chatbot-status" id="chatbotStatus">K-POP 신규 걸그룹 가이드</p>
+          </div>
+        </div>
+        <div class="chatbot-header-actions">
+          <button type="button" class="chatbot-icon-btn" id="chatbotSettingsBtn" aria-label="API 설정" title="API 설정">⚙</button>
+          <button type="button" class="chatbot-icon-btn" id="chatbotCloseBtn" aria-label="챗봇 닫기">&times;</button>
+        </div>
+      </header>
+
+      <div class="chatbot-settings hidden" id="chatbotSettings">
+        <p class="chatbot-settings-label">OpenAI GPT API 키</p>
+        <input
+          type="password"
+          id="chatbotApiKeyInput"
+          class="chatbot-settings-input"
+          placeholder="sk-..."
+          autocomplete="off"
+        >
+        <select id="chatbotModelSelect" class="chatbot-settings-input">
+          <option value="gpt-4o-mini">gpt-4o-mini (추천)</option>
+          <option value="gpt-4o">gpt-4o</option>
+          <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+        </select>
+        <button type="button" class="btn btn--primary chatbot-save-key" id="chatbotSaveKeyBtn">키 저장</button>
+        <p class="chatbot-settings-note">API 키는 브라우저 localStorage에만 저장됩니다.</p>
+      </div>
+
+      <div class="chatbot-messages" id="chatbotMessages" role="log" aria-live="polite"></div>
+
+      <div class="chatbot-suggestions" id="chatbotSuggestions">
+        <button type="button" class="chatbot-suggestion" data-msg="Keyveatz 그룹 소개해줘">Keyveatz 소개</button>
+        <button type="button" class="chatbot-suggestion" data-msg="2026년 데뷔 예정 걸그룹 알려줘">데뷔 예정</button>
+        <button type="button" class="chatbot-suggestion" data-msg="Hearts2Hearts 멤버와 데뷔곡은?">H2H 정보</button>
+      </div>
+
+      <form class="chatbot-form" id="chatbotForm">
+        <input
+          type="text"
+          id="chatbotInput"
+          class="chatbot-input"
+          placeholder="신규 걸그룹에 대해 물어보세요..."
+          autocomplete="off"
+          maxlength="500"
+        >
+        <button type="submit" class="chatbot-send" id="chatbotSendBtn" aria-label="전송">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <button type="button" class="chatbot-toggle" id="chatbotToggle" aria-label="AI 챗봇 열기" aria-expanded="false">
+      <svg class="chatbot-toggle-icon chatbot-toggle-icon--open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+      <svg class="chatbot-toggle-icon chatbot-toggle-icon--close hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+      </svg>
+      <span class="chatbot-toggle-badge">AI</span>
+    </button>
+  </div>
+
+  <!-- OpenAI GPT API 설정 (발급받은 sk- 키를 아래 apiKey에 입력하세요) -->
+  <script>
+    window.GPT_CONFIG = {
+      apiKey: 'YOUR_OPENAI_API_KEY_HERE',
+      model: 'gpt-4o-mini',
+      endpoint: 'https://api.openai.com/v1/chat/completions',
+      // localhost에서 python proxy-server.py 실행 시 CORS 우회용
+      proxyEndpoint: 'http://localhost:8787/v1/chat/completions'
+    };
+  </script>
+
   <script src="members.js"></script>
   <script src="script.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 </html>
