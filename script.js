@@ -279,6 +279,7 @@ function renderGroupImage(group, className, loading = 'lazy') {
       src="${group.image}"
       alt="${group.imageAlt || group.nameKr + ' 그룹 사진'}"
       loading="${loading}"
+      referrerpolicy="no-referrer"
       onerror="handleImageError(this)"
     >
     <span class="group-card-initial image-fallback hidden">${getInitials(group.name)}</span>
@@ -460,7 +461,7 @@ function openModal(groupId) {
           </div>
           <div class="member-preview-content hidden">
             <div class="member-preview-photo-wrap">
-              <img class="member-preview-photo" src="" alt="" onerror="handleImageError(this)">
+              <img class="member-preview-photo" src="" alt="" referrerpolicy="no-referrer" onerror="handleImageError(this)">
               <span class="group-card-initial image-fallback hidden">${getInitials('')}</span>
             </div>
             <div class="member-preview-info">
@@ -506,6 +507,7 @@ function showMemberPreview(group, members, index) {
   content.classList.remove('hidden');
 
   photo.style.display = '';
+  photo.referrerPolicy = 'no-referrer';
   photo.src = member.image;
   photo.alt = `${group.nameKr} ${member.name} 프로필 사진`;
   fallback.textContent = getInitials(member.name);
