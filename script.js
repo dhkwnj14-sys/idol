@@ -141,6 +141,26 @@ const GROUPS = [
     description: 'PSY의 P NATION 첫 걸그룹. (G)I-DLE 전소연이 프로듀싱을 맡아 "Baby Rock"이라는 자체 장르를 선보였다. 성적이나 숫자로 사람을 판단하지 말라는 당당한 메시지의 "F Girl"로 데뷔, MV 조회수 2,600만 회를 돌파했다.'
   },
   {
+    id: 'rescene',
+    name: 'RESCENE',
+    nameKr: '리센느',
+    agency: 'THE MUZE Entertainment',
+    debutDate: '2024-03-26',
+    status: 'debuted',
+    members: 5,
+    memberNames: ['원이', '리브', '미나미', '메이', '제나'],
+    genre: 'Dance-pop',
+    concept: 'Scene × Scent',
+    debutSong: 'UhUh',
+    album: 'Re:Scene',
+    generation: '5세대',
+    featured: false,
+    color: 'linear-gradient(135deg, #a8c0ff, #ff9a9e)',
+    image: 'https://kprofiles.com/wp-content/uploads/2024/02/RESCENE-Pretty-Girl-Special-Single-Concept-Photo-1-scaled.jpg',
+    imageAlt: 'RESCENE 공식 그룹 사진',
+    description: '더뮤즈엔터테인먼트 소속 5인조 다국적 걸그룹. 2024년 3월 26일 데뷔 싱글 "Re:Scene"으로 활동을 시작했다. 그룹명은 향기(Scent)로 장면(Scene)을 다시 떠올린다는 의미를 담고 있다. 미니 3집 "lip bomb"(2025), 2026년 "Busy Boy" 등을 발매하며 꾸준히 성장 중이며, "LOVE ATTACK" 역주행 등 차트에서도 주목받고 있다.'
+  },
+  {
     id: 'saintxogirls',
     name: 'SAINT XO GIRLS',
     nameKr: '세인트 엑스오 걸즈',

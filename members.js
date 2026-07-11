@@ -52,6 +52,13 @@ const MEMBER_LISTS = {
     { name: '미아', stageName: 'Mia', position: '보컬', image: 'https://kprofiles.com/wp-content/uploads/2025/06/mia-2.jpg' },
     { name: '베니', stageName: 'Beni', position: '보컬 · 막내', image: 'https://kprofiles.com/wp-content/uploads/2025/06/beni-3.jpg' }
   ],
+  rescene: [
+    { name: '원이', stageName: 'Woni', position: '리더', image: 'https://kprofiles.com/wp-content/uploads/2024/02/RESCENE-Pretty-Girl-Special-Single-Concept-Photo-WONI-1-900x720.jpg' },
+    { name: '리브', stageName: 'Liv', position: '보컬', image: 'https://kprofiles.com/wp-content/uploads/2024/02/RESCENE-Pretty-Girl-Special-Single-Concept-Photo-LIV-1-640x800.jpg' },
+    { name: '미나미', stageName: 'Minami', position: '보컬', image: 'https://kprofiles.com/wp-content/uploads/2024/02/RESCENE-Pretty-Girl-Special-Single-Concept-Photo-MINAMI-1-640x800.jpg' },
+    { name: '메이', stageName: 'May', position: '보컬', image: 'https://kprofiles.com/wp-content/uploads/2024/02/RESCENE-Pretty-Girl-Special-Single-Concept-Photo-MAY-1-640x800.jpg' },
+    { name: '제나', stageName: 'Zena', position: '비주얼 센터 · 막내', image: 'https://kprofiles.com/wp-content/uploads/2024/02/RESCENE-Pretty-Girl-Special-Single-Concept-Photo-ZENA-1-640x800.jpg' }
+  ],
   saintxogirls: [
     { name: '레이', stageName: 'Lei', position: '멤버', image: 'https://kprofiles.com/wp-content/uploads/2024/08/lei-1.jpg' },
     { name: '수민', stageName: 'Soomin', position: '멤버', image: 'https://kprofiles.com/wp-content/uploads/2024/08/sumin.jpg' },
